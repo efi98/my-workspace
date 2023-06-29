@@ -5,20 +5,6 @@ import { Ex2Component } from './ex2/ex2.component';
 import { ExternalComponent } from './external/external.component';
 
 const routes: Routes = [
-  // {
-    // path: '',
-    // component: ExternalComponent,
-    // children: [
-      // {
-      //   path: 'ex1',
-      //   component: Ex1Component,
-      // },
-      // {
-      //   path: 'ex2',
-      //   component: Ex2Component,
-      // },
-    // ],
-  // },
   {
     path: 'ex1',
     component: Ex1Component,
@@ -27,7 +13,6 @@ const routes: Routes = [
     path: 'ex2',
     component: Ex2Component,
   },
-
   {
     path: '',
     pathMatch: 'full',

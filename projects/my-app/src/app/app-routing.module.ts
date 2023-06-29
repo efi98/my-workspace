@@ -8,13 +8,18 @@ import { TowComponent } from './tow/tow.component';
 const routes: Routes = [
   {
     path: 'first',
-    component: FirstComponent
+    component: FirstComponent,
+    children: [{
+      path: '',
+      loadChildren: () =>
+      import('projects/my-app/external/external.module').then((m) => m.ExternalModule)
+    }]
   },
-  {
-    path: 'first/:external',
+ /*  {
+    path: 'first',
     loadChildren: () =>
       import('projects/my-app/external/external.module').then((m) => m.ExternalModule)
-  },
+  }, */
   {
     path: 'second',
     component: SecondComponent,
